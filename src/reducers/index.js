@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
-//import componentsReducer from './components';
+import carouselReducer from './carousel';
+import productsReducer from './products';
 
 const rootReducer = combineReducers({
-    state: (state = {}) => state
+    carousel: carouselReducer,
+    products: productsReducer
 });
 
 export default rootReducer;

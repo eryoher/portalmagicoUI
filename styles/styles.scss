@@ -2,9 +2,193 @@
 @import '../node_modules/breakpoint-sass/stylesheets/breakpoint';
 @import 'functions';
 
-body{
+body{    
     #CasaDelRhin{
         max-width: $width-page;
+        padding-left: 0px;
+        padding-right: 0px;
+        .content-body{
+            min-height: 800px;
+        }
+        .header-container{
+            min-height: 128px;
+            background-color: #b90b25ff;
+            padding-right: 10%;
+            padding-left: 10%;
+            @include breakpoint(max-width 1166px) {
+                padding-right: 5%;
+                padding-left: 5%;
+            }
+
+            .navbar-brand {
+                @include breakpoint(max-width 360px) {
+                    width: 50%;
+                }
+
+                .logo-header{
+                    @include breakpoint(max-width 360px) {
+                        width: 125%;
+                    }
+                }
+
+            }
+            .menu{                                
+                @include BebasNBold(15pt);
+                vertical-align: middle;
+                color: #fff;
+                margin-left: 10px;
+                margin-right: 10px;       
+                @include breakpoint(max-width 767px) {
+                    
+                }                
+                       
+            }
+            .social-media{
+                margin-left: 5%;
+                border-left: solid 2px #fff;
+                padding-left: 2%;
+                @include breakpoint(max-width 1000px) {
+                    border: 0px;
+                    padding-left: 0px;
+                }
+                .icon {
+                    background-repeat: no-repeat;
+                    background-position: left;
+                    background-size: 20px;
+                    display: inline-block;
+                    margin: 5px;
+                    width: 20px;
+                    height: 20px;
+                }
+            }  
+        }
+        .homepage-container{
+            .presentation-mode{
+                .conten-slide{
+                    .my-slide-content{
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        min-height: $height-content-page;   
+                        width: 100%;
+                        .slogan-content{
+                            height: 100%;
+                            .slogan{
+                                .title{
+                                    padding-left: 15px;
+                                }
+                                border: solid 3px white;
+                                border-bottom: 0px;
+                                background-color: #00000021;
+                                @include BebasNBold(72pt);
+                                color: #fff;                                
+                                padding-right: 15px;
+                                margin-top: 47%;
+                                @include breakpoint($min-page-width-md) {
+                                    @include BebasNBold(42pt);
+                                    margin-top: 80%;
+                                }
+                                .bottom-slogan {
+                                    font-size: 9pt;
+                                    border-bottom: 3px solid #fff;                                                                        
+                                }
+                            }
+                        }
+                        
+                    }
+                }    
+            }                         
+
+        }
+        .nosotros-container{
+            background-image: url('../img/background_content.png');
+            background-repeat: repeat;
+            min-height: $height-content-page;
+            .nosotros-fundacion{
+                width: auto;
+                min-height: 300px; 
+                margin-top: 33%; 
+                @include breakpoint($min-page-width-md) {
+                    margin-top: 10%; 
+                }
+
+                @include backgroundImage();
+                .year{
+                    margin-top:38%;
+                    height: 100%;
+                    @include BebasNRegular(20pt);
+                    color: #fff;
+                }
+
+            }
+            .history{
+                @include RobotoLight(15pt);
+                .italic{
+                    @include RobotoLightItalic(15pt);
+
+                }
+            }
+            .btn-rhin{
+                background-color: #b90b25ff;
+                color: #fff;
+                @include BebasNBold(18pt);
+                padding-left: 25px;
+                padding-right: 25px;
+            }
+            .menu-productos{
+                @include backgroundImage();
+                width: 100%;
+                height: 661px; 
+                padding: 18px;
+                margin-top: 10%;                
+                @include breakpoint($min-page-width-md) {
+                    height: 400px; 
+
+                }
+                .content-product{
+                    height: 100%;
+                    border: solid 1px white;
+                    overflow: auto;
+                    .item-product{
+                        display: block;
+                        border: solid 1px #b90b25ff;
+                        color: #fff;
+                        background-color: #b90b25ff;
+                        @include BebasNBold(25pt);
+                        padding-left: 15px;
+                        padding-right: 15px;
+                        padding-top: 10px;
+                    
+                    }
+                }
+            }
+        }
+
+        .footer-container{
+            min-height: $height-footer-page;
+            line-height: 0.2;
+            @include breakpoint($min-page-width-md) {
+                text-align: center !important;
+            }
+            .logo{
+                text-align: right;
+                @include breakpoint($min-page-width-md) {
+                    text-align: center !important;
+                }
+
+            }
+            .address{
+                @include RobotoNormal(10pt);
+            }
+            .message{
+                @include RobotoMediumItalic(9pt);
+                @include breakpoint(max-width 493px) {
+                    line-height: 1;
+                }
+
+                line-height: 0.2;
+            }
+        }            
     }
+    
 
 }

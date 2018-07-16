@@ -14,17 +14,21 @@ module.exports = {
   devServer:{
     host:'localhost',
     port: 3000,
-    inline: true
+    inline: true,
+    historyApiFallback: true,
+    contentBase: './',    
+    https: false
   },
   mode: 'development',
   module: {
     rules: [
-      { 
-        test: /\.css$/, use: 'css-loader' 
+      {
+        test: /\.css$/,
+        use: [ 'style-loader', 'css-loader' ]
       },
       { 
         test: /\.scss$/, 
-        loaders: ['style-loader', 'css-loader', 'sass-loader']
+        loaders: ['style-loader', 'css-loader?sourceMap', 'sass-loader?sourceMap']
       },
       {
           test: /\.js$/,
@@ -39,6 +43,18 @@ module.exports = {
           test: /\.(png|jpg)$/,
           loader: 'url-loader?limit=8192'
       },      
+      { test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'url-loader?limit=10000&minetype=application/font-woff' },
+      { test: /\.woff2$/,
+        loader: 'url-loader?limit=10000&minetype=application/font-woff' },
+      { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'url-loader?limit=10000&minetype=application/octet-stream' },
+      { test: /\.otf(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'url-loader?limit=10000&minetype=application/octet-stream' },
+      { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'url-loader?limit=10000&mimetype=application/vnd.ms-fontobject' },
+      { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'url-loader?limit=10000&minetype=image/svg+xml' }
     ]
   }
 }
