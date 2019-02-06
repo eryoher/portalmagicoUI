@@ -9,11 +9,12 @@ class HomePage extends Component {
   renderCarousel(){
 
     var gallerie = this.props.carousel;
+    
     if (gallerie.length){
       return (
           <Carousel
             showArrows={true}
-            width = "100%"
+            width = "90%"
             autoPlay={true}
             interval={5000}
             infiniteLoop={true}
@@ -33,15 +34,18 @@ class HomePage extends Component {
     var rows = [];
     for (var key in gallerie) {
       var picture = gallerie[key];
+      console.log(picture.imgUrl);
+      
       if(picture.active){
         rows.push(
           <div key={key} className="conten-slide">
-            <div key={key} className="my-slide-content" style={{backgroundImage: `url(${picture['imgUrl']})`}}>
-              <div className="d-flex align-items-center justify-content-center slogan-content">                
+            <div key={key} className="my-slide-content" >
+              <div className="d-flex align-items-center justify-content-center slogan-content">
+                  <img src={picture.imgUrl}  />
                   <div className="slogan">
                     <div className="title">
-                      {picture['slogan']}    
-                    </div>                    
+                      {picture['slogan']}
+                    </div>
                     <div className="d-flex bd-highlight">
                       <div className="p-2 flex-fill bd-highlight bottom-slogan"></div>
                       <div className="p-2 flex-fill bd-highlight bottom-slogan"></div>
@@ -49,7 +53,7 @@ class HomePage extends Component {
                       <div className="p-2 flex-fill bd-highlight bottom-slogan"></div>
                       <div className="p-2 flex-fill bd-highlight "></div>
                     </div>
-                  </div>                
+                  </div>
               </div>
             </div>
           </div>

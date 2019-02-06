@@ -16,28 +16,28 @@ class Nosotros extends Component {
         });
 
         return rows;
-      
+
     }
 
-  render() {    
+  render() {
     var imgMenuProducts = '../../img/nosotros_img_1.jpg';
     var imgProducts = '../../img/nosotros_img_2.png';
 
     return (
-      <div className="nosotros-container">
+      <div className="nosotros-containe">
         <div className="container">
             <div className="row">
                 <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                     <div className="d-flex align-items-center justify-content-center nosotros-fundacion" style={{backgroundImage: `url(${imgProducts})`}} >
                         <div className="year">
                             fundada en 1933
-                        </div>                        
+                        </div>
                     </div>
                     <div className="col-12 mt-3 text-center history">
-                        Acompañando todas las ocasiones especiales de 
+                        Acompañando todas las ocasiones especiales de
                         los colombianos que han hecho de  <span className="italic">
-                        Casa del Rhin</span> una empresa de tradición, y que la han 
-                        consolidado como la más importante casa 
+                        Casa del Rhin</span> una empresa de tradición, y que la han
+                        consolidado como la más importante casa
                         productora de vinos del país.
                     </div>
                     <div className="col-12 text-center mt-3">
@@ -48,9 +48,9 @@ class Nosotros extends Component {
                 </div>
                 <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                     <div className="menu-productos" style={{backgroundImage: `url(${imgMenuProducts})`}} >
-                        <div className="content-product d-flex align-items-center justify-content-center  flex-column">                            
+                        <div className="content-product d-flex align-items-center justify-content-center  flex-column">
                             {this.renderProducts()}
-                        </div>                        
+                        </div>
                     </div>
                 </div>
             </div>

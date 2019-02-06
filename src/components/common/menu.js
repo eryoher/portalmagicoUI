@@ -13,7 +13,7 @@ import {
 
 import MediaQuery from 'react-responsive';
 
-import logoURL from '../../../img/logo_header.png';
+import logoURL from '../../../img/logo-header.png';
 
 export default class Example extends React.Component {
   
@@ -53,15 +53,16 @@ export default class Example extends React.Component {
                     </div>
                     <div className="d-flex justify-content-end w-100">
                         <Link to="/" >
-                            <div className="menu ">HOME</div>
+                            <div className="menu ">Home</div>
                         </Link>
                         <Link to="/nosotros" >
-                            <div className="menu">NOSOTROS</div>
+                            <div className="menu">Nosotros</div>
                         </Link>
-                        <div className="menu">SENSACIONES</div>
-                        <div className="menu">DISTRIBUIDORES</div>
-                        <div className="menu">ACTUALIDAD</div>
-                        <div className="menu">CONTACTO</div>                        
+                        <div className="menu">Campañas</div>
+                        <div className="menu">Proyectos</div>
+                        <div className="menu">Aliados</div>
+                        <div className="menu">Regala sonrisas</div>                        
+                        <div className="menu">Contacto</div>                        
                         <MediaQuery query="(min-device-width: 972px)">
                             <div className="social-media">
                                 <div className="icon " style={{backgroundImage: `url(${iconFacebook})`}} ></div>
@@ -83,7 +84,7 @@ export default class Example extends React.Component {
                         <NavbarToggler onClick={this.toggleNavbar} className="" />
                         <Collapse isOpen={!this.state.collapsed} navbar>
                             <Nav navbar>
-                               <NavItem>
+                                <NavItem>
                                     <NavLink href="/" className="menu" >HOME</NavLink>
                                 </NavItem>
                                 <NavItem>

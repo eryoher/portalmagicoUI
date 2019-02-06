@@ -2,8 +2,8 @@
 @import '../node_modules/breakpoint-sass/stylesheets/breakpoint';
 @import 'functions';
 
-body{    
-    #CasaDelRhin{
+body{
+    #PortalMagico{
         max-width: $width-page;
         padding-left: 0px;
         padding-right: 0px;
@@ -12,9 +12,10 @@ body{
         }
         .header-container{
             min-height: 128px;
-            background-color: #b90b25ff;
+            background-color: #fff;
             padding-right: 10%;
             padding-left: 10%;
+            
             @include breakpoint(max-width 1166px) {
                 padding-right: 5%;
                 padding-left: 5%;
@@ -30,19 +31,16 @@ body{
                         width: 125%;
                     }
                 }
-
             }
-            .menu{                                
-                @include BebasNBold(15pt);
+            
+            .menu{
+                @include QuickSandRegular(15pt);
                 vertical-align: middle;
-                color: #fff;
+                color: #000;
                 margin-left: 10px;
-                margin-right: 10px;       
-                @include breakpoint(max-width 767px) {
-                    
-                }                
-                       
+                margin-right: 10px;
             }
+
             .social-media{
                 margin-left: 5%;
                 border-left: solid 2px #fff;
@@ -60,7 +58,7 @@ body{
                     width: 20px;
                     height: 20px;
                 }
-            }  
+            }
         }
         .homepage-container{
             .presentation-mode{
@@ -68,80 +66,80 @@ body{
                     .my-slide-content{
                         background-repeat: no-repeat;
                         background-size: cover;
-                        min-height: $height-content-page;   
+                        min-height: 412px;
                         width: 100%;
                         .slogan-content{
                             height: 100%;
-                            .slogan{
+                            .sloghnan{
                                 .title{
                                     padding-left: 15px;
                                 }
                                 border: solid 3px white;
                                 border-bottom: 0px;
                                 background-color: #00000021;
-                                @include BebasNBold(72pt);
-                                color: #fff;                                
+                                @include QuickSandRegular(72pt);
+                                color: #fff;
                                 padding-right: 15px;
                                 margin-top: 47%;
                                 @include breakpoint($min-page-width-md) {
-                                    @include BebasNBold(42pt);
+                                    @include QuickSandRegular(42pt);
                                     margin-top: 80%;
                                 }
                                 .bottom-slogan {
                                     font-size: 9pt;
-                                    border-bottom: 3px solid #fff;                                                                        
+                                    border-bottom: 3px solid #fff;
                                 }
                             }
                         }
-                        
+
                     }
-                }    
-            }                         
+                }
+            }
 
         }
         .nosotros-container{
-            background-image: url('../img/background_content.png');
+            //background-image: url('../img/background_content.png');
             background-repeat: repeat;
             min-height: $height-content-page;
             .nosotros-fundacion{
                 width: auto;
-                min-height: 300px; 
-                margin-top: 33%; 
+                min-height: 300px;
+                margin-top: 33%;
                 @include breakpoint($min-page-width-md) {
-                    margin-top: 10%; 
+                    margin-top: 10%;
                 }
 
                 @include backgroundImage();
                 .year{
                     margin-top:38%;
                     height: 100%;
-                    @include BebasNRegular(20pt);
+                    @include QuickSandRegular(20pt);
                     color: #fff;
                 }
 
             }
             .history{
-                @include RobotoLight(15pt);
+                @include QuickSandRegular(15pt);
                 .italic{
-                    @include RobotoLightItalic(15pt);
+                    @include QuickSandRegular(15pt);
 
                 }
             }
             .btn-rhin{
                 background-color: #b90b25ff;
                 color: #fff;
-                @include BebasNBold(18pt);
+                @include QuickSandRegular(18pt);
                 padding-left: 25px;
                 padding-right: 25px;
             }
             .menu-productos{
                 @include backgroundImage();
                 width: 100%;
-                height: 661px; 
+                height: 661px;
                 padding: 18px;
-                margin-top: 10%;                
+                margin-top: 10%;
                 @include breakpoint($min-page-width-md) {
-                    height: 400px; 
+                    height: 400px;
 
                 }
                 .content-product{
@@ -153,11 +151,11 @@ body{
                         border: solid 1px #b90b25ff;
                         color: #fff;
                         background-color: #b90b25ff;
-                        @include BebasNBold(25pt);
+                        @include QuickSandRegular(25pt);
                         padding-left: 15px;
                         padding-right: 15px;
                         padding-top: 10px;
-                    
+
                     }
                 }
             }
@@ -177,18 +175,18 @@ body{
 
             }
             .address{
-                @include RobotoNormal(10pt);
+                @include QuickSandRegular(10pt);
             }
             .message{
-                @include RobotoMediumItalic(9pt);
+                @include QuickSandRegular(9pt);
                 @include breakpoint(max-width 493px) {
                     line-height: 1;
                 }
 
                 line-height: 0.2;
             }
-        }            
+        }
     }
-    
+
 
 }
