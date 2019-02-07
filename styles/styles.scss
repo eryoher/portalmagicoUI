@@ -4,6 +4,7 @@
 
 body{
     #PortalMagico{
+        border: 1px solid red;
         max-width: $width-page;
         padding-left: 0px;
         padding-right: 0px;
@@ -11,10 +12,16 @@ body{
             min-height: 800px;
         }
         .header-container{
+
+            .top-header{                
+                background-repeat: repeat-x;
+                height: 46px;
+                background-size: cover;
+                
+            }
+
             min-height: 128px;
-            background-color: #fff;
-            padding-right: 10%;
-            padding-left: 10%;
+            background-color: #fff;            
             
             @include breakpoint(max-width 1166px) {
                 padding-right: 5%;
@@ -32,19 +39,34 @@ body{
                     }
                 }
             }
-            
-            .menu{
-                @include QuickSandRegular(15pt);
-                vertical-align: middle;
-                color: #000;
-                margin-left: 10px;
-                margin-right: 10px;
+            .menu-margen{            
+                border-bottom: 1px solid #44bccc;  
+                padding-bottom: 2px;
+                .menu-container{
+                    background-color:rgb(221, 242, 245);               
+                    .menu{
+                        @include QuickSandRegular(15pt);
+                        vertical-align: middle;
+                        color: #000;
+                        font-weight: bold;
+                        margin-left: 10px;
+                        margin-right: 10px;                    
+                        a{
+                            text-decoration: none;
+                            color: #000;
+                        }
+                    }
+                    .left-divider{
+                        border-left: 1px solid red;
+                        padding-left: 8px;
+                        height: .9em;
+                    }
+                }
             }
 
             .social-media{
-                margin-left: 5%;
-                border-left: solid 2px #fff;
-                padding-left: 2%;
+                padding-left: 1%;
+                margin-bottom: 8%;
                 @include breakpoint(max-width 1000px) {
                     border: 0px;
                     padding-left: 0px;
@@ -52,16 +74,36 @@ body{
                 .icon {
                     background-repeat: no-repeat;
                     background-position: left;
-                    background-size: 20px;
+                    background-size: 30px;
                     display: inline-block;
-                    margin: 5px;
-                    width: 20px;
-                    height: 20px;
+                    width: 30px;
+                    height: 30px;
                 }
             }
         }
         .homepage-container{
             .presentation-mode{
+                padding-top: 3%;
+                .carousel{
+                    .control-dots{
+                        .dot{
+                            width: 30px;
+                            height: 30px;                                            
+                            border: 3px solid #fff;
+                            background: none;
+                            opacity: 1;
+
+                        }
+                        .selected{
+                            opacity: 1;
+                            background: #fff;
+                        }   
+                        
+                    }
+                }
+                .carousel-slider{
+                    margin: 0px auto;
+                }
                 .conten-slide{
                     .my-slide-content{
                         background-repeat: no-repeat;
@@ -169,6 +211,7 @@ body{
             }
             .logo{
                 text-align: right;
+                width: 212px;
                 @include breakpoint($min-page-width-md) {
                     text-align: center !important;
                 }
@@ -185,6 +228,17 @@ body{
 
                 line-height: 0.2;
             }
+        }
+
+        .div-divider{
+            margin: 0 5px;
+            display: inline-block;
+            height: 1em;
+            vertical-align: middle;
+            position: relative;
+            top: 0.5em;
+            width: 2px;
+            background-color: #3896a2;
         }
     }
 

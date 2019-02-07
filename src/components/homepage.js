@@ -14,12 +14,12 @@ class HomePage extends Component {
       return (
           <Carousel
             showArrows={true}
-            width = "90%"
+            width = "1014px"
             autoPlay={true}
             interval={5000}
             infiniteLoop={true}
             showStatus={false}
-            showArrows={true}
+            showArrows={false}
             showThumbs={false}
             dynamicHeight={true}
             className="presentation-mode"
@@ -34,8 +34,6 @@ class HomePage extends Component {
     var rows = [];
     for (var key in gallerie) {
       var picture = gallerie[key];
-      console.log(picture.imgUrl);
-      
       if(picture.active){
         rows.push(
           <div key={key} className="conten-slide">
@@ -66,7 +64,7 @@ class HomePage extends Component {
 
   render() {
     return (
-      <div className="homepage-container">
+      <div className="homepage-container text-center">
         {this.renderCarousel()}
       </div>
     );

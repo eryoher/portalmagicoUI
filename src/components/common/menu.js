@@ -14,6 +14,7 @@ import {
 import MediaQuery from 'react-responsive';
 
 import logoURL from '../../../img/logo-header.png';
+import Divider from './divider';
 
 export default class Example extends React.Component {
   
@@ -40,9 +41,9 @@ export default class Example extends React.Component {
   }
 
   render() {
-    var iconInstagram ="../../../img/instagram_icon_white.png";
-    var iconFacebook = "../../../img/facebook_icon.png";
-    var iconSearch = "../../../img/search_icon_white_md.png";
+    var iconTwitter ="../../../img/logo_twitter.png";
+    var iconFacebook = "../../../img/logo_facebook.png";
+    var iconYouTube = "../../../img/logo_youtube.png";
 
     return (
         <div className="row">
@@ -51,28 +52,38 @@ export default class Example extends React.Component {
                     <div className="logo">
                         <img src={logoURL}/>
                     </div>
-                    <div className="d-flex justify-content-end w-100">
-                        <Link to="/" >
-                            <div className="menu ">Home</div>
-                        </Link>
-                        <Link to="/nosotros" >
-                            <div className="menu">Nosotros</div>
-                        </Link>
-                        <div className="menu">Campañas</div>
-                        <div className="menu">Proyectos</div>
-                        <div className="menu">Aliados</div>
-                        <div className="menu">Regala sonrisas</div>                        
-                        <div className="menu">Contacto</div>                        
-                        <MediaQuery query="(min-device-width: 972px)">
-                            <div className="social-media">
-                                <div className="icon " style={{backgroundImage: `url(${iconFacebook})`}} ></div>
-                                <div className="icon " style={{backgroundImage: `url(${iconInstagram})`}} ></div>
-                                <div className="icon " style={{backgroundImage: `url(${iconSearch})`}} ></div>
+                    <div className="menu-margen">
+                        <div className="d-flex menu-container">
+                            <div className="menu ">
+                                <Link to="/">
+                                    Home
+                                </Link>
                             </div>
-                        </MediaQuery>
+                            <Divider />
+                            <div className="menu">
+                                <Link to="/nosotros" >
+                                    Nosotros
+                                </Link>
+                            </div>
+                            <Divider />
+                            <div className="menu">Campañas</div>
+                            <Divider />
+                            <div className="menu">Proyectos</div>
+                            <Divider />
+                            <div className="menu">Aliados</div>
+                            <Divider />
+                            <div className="menu">Regala sonrisas</div>                        
+                            <Divider />
+                            <div className="menu">Contacto</div>                                                             
+                        </div>                        
                     </div>
-                    
-                
+                    <MediaQuery query="(min-device-width: 972px)">
+                        <div className="social-media">
+                            <div className="icon " style={{backgroundImage: `url(${iconYouTube})`}} ></div>
+                            <div className="icon " style={{backgroundImage: `url(${iconFacebook})`}} ></div>
+                            <div className="icon " style={{backgroundImage: `url(${iconTwitter})`}} ></div>
+                        </div>
+                    </MediaQuery> 
                 </div>
             </MediaQuery>
             <MediaQuery query="(max-device-width: 767px)">
