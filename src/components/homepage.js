@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import { Carousel } from 'react-responsive-carousel';
-import ReactDOM from 'react-dom';
+import { Parallax } from "react-parallax";
 import 'react-responsive-carousel/lib/styles/carousel.css';
+import Nosotros from './nosotros' 
 
 class HomePage extends Component {
 
@@ -61,19 +62,81 @@ class HomePage extends Component {
     return rows;
   }
 
+  renderAboutus() {
+    return(
+      <div className={"about-us"} >
+        <div className={"title"} >
+          Acerca de <span className={"color-blue"} >nosotros</span>
+        </div>
+        <div className={"content text-justify"} >
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+              Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+              ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
+              consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In
+              enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis
+        </div>
+      </div>
+    )
+  }
+
+  renderCampaigns(){
+    const {campaigns} = this.props
+    let rows = []
+    campaigns.forEach((campaign, index) => {
+      rows.push(
+        <li key={index}>{ campaign.text }</li>
+      )
+    });
+
+    return(
+      <div className={"campaign-content  container"}>
+        <div className={"row"} >          
+          <div className={"col"}>
+            <div className={"title text-left"} > <span style={{fontWeight:'bold'}} > Nuestras </span> <span className={"color-blue"}> Campañas </span></div>
+            <ol className={"text-justify"} >
+              {rows}
+            </ol>
+          </div>
+          <div className={"col"}>
+            <img src={"http://localhost/freelance/portalMagicoApi/img/campaigns.png"} width={'100%'} />
+          </div>
+        </div>
+      </div>
+
+    )
+
+  }
+
 
   render() {
+    const {campaigns} = this.props
     return (
-      <div className="homepage-container text-center">
-        {this.renderCarousel()}
+      <div>
+        <Parallax strength={500}>
+          <div className="homepage-container text-center">
+            <div>
+              {this.renderCarousel()}
+            </div>
+            <div>
+              {this.renderAboutus()}
+            </div>
+            <div>
+              { campaigns && this.renderCampaigns()}
+            </div>
+          </div>
+        </Parallax>
+        <Parallax strength={500}>
+          <Nosotros />
+        </Parallax>
       </div>
     );
   }
 }
 
-function mapStateToProps(state){
+function mapStateToProps({carousel, campaigns}){
   return {
-    carousel : state.carousel
+    carousel,
+    campaigns
   }
 }
 

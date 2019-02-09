@@ -4,6 +4,10 @@
 
 body{
     #PortalMagico{
+        .color-blue{
+            color:$blue;
+        }
+
         border: 1px solid red;
         max-width: $width-page;
         padding-left: 0px;
@@ -12,7 +16,6 @@ body{
             min-height: 800px;
         }
         .header-container{
-
             .top-header{                
                 background-repeat: repeat-x;
                 height: 46px;
@@ -82,6 +85,46 @@ body{
             }
         }
         .homepage-container{
+            .about-us{
+                padding-top: 2%;                
+                .title{
+                    color: #414243;
+                    @include MyriadRegular(32pt);
+                    font-weight: bold;                    
+                    border-bottom: solid 2px $blue;
+                    width: auto;
+                    margin: 0px auto;                    
+                    display: -webkit-inline-box;
+                }
+                .content{
+                    @include MyriadRegular(11pt);
+                    padding: 0 20%;
+                    padding-top: 3%;                
+                }
+            }
+
+            .campaign-content{
+                padding-top: 3%;
+                @include MyriadRegular(11pt);
+                ol{               
+                    counter-reset: my-awesome-counter;    
+                    list-style: none;
+                    li{
+                        counter-increment: my-awesome-counter;
+                        padding-bottom: 25px;                        
+                        &:before{
+                            content: counter(my-awesome-counter) ". ";
+                            color:$blue;
+                        }
+                    }                   
+                }
+                .title{
+                    @include MyriadRegular(32pt);
+                    margin-bottom: 3%;
+                    padding-left: 25px;
+                }
+            }
+
             .presentation-mode{
                 padding-top: 3%;
                 .carousel{
