@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Carousel } from 'react-responsive-carousel';
 import { Parallax } from "react-parallax";
 import 'react-responsive-carousel/lib/styles/carousel.css';
-import Nosotros from './nosotros' 
+import Projects from './projects' 
 
 class HomePage extends Component {
 
@@ -106,8 +106,6 @@ class HomePage extends Component {
     )
 
   }
-
-
   render() {
     const {campaigns} = this.props
     return (
@@ -126,7 +124,7 @@ class HomePage extends Component {
           </div>
         </Parallax>
         <Parallax strength={500}>
-          <Nosotros />
+          <Projects />
         </Parallax>
       </div>
     );

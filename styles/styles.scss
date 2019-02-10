@@ -8,6 +8,10 @@ body{
             color:$blue;
         }
 
+        .text-bold{
+            font-weight: bold;
+        }
+
         border: 1px solid red;
         max-width: $width-page;
         padding-left: 0px;
@@ -15,6 +19,37 @@ body{
         .content-body{
             min-height: 800px;
         }
+
+        .projects-content{
+            .donaciones-content{
+                .vertical-divider{
+                    border-bottom: 3px solid $blue;            
+                    margin-left: 0px;
+                    height: 1px;
+                    margin-bottom: 2%;
+                    width: 40%;
+                }
+            }
+
+            .title{
+                @include MyriadRegular(36pt);    
+                width: auto;
+            }
+            .vertical-divider{
+                border-bottom: 3px solid $blue;            
+                margin: 0px auto;
+                height: 1px;
+                margin-bottom: 2%;
+                width: 38%;
+            }
+
+            .list-videos-projects{
+                padding: 15px;
+                background-color: #e8baa8;
+            }
+            
+        }
+
         .header-container{
             .top-header{                
                 background-repeat: repeat-x;
