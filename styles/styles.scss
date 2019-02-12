@@ -4,6 +4,39 @@
 
 body{
     #PortalMagico{
+
+        .presentation-mode{
+            padding-top: 3%;
+            .carousel{
+                .control-dots{
+                    .dot{
+                        width: 30px;
+                        height: 30px;                                            
+                        border: 3px solid #fff;
+                        background: none;
+                        opacity: 1;
+
+                    }
+                    .selected{
+                        opacity: 1;
+                        background: #fff;
+                    }   
+                    
+                }
+            }
+            .carousel-slider{
+                margin: 0px auto;
+            }
+            .conten-slide{
+                .my-slide-content{
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    min-height: 412px;
+                    width: 100%;
+                }
+            }
+        }
+
         .color-blue{
             color:$blue;
         }
@@ -18,7 +51,7 @@ body{
         padding-right: 0px;
         .content-body{
             min-height: 800px;
-        }
+        }        
 
         .projects-content{
             .donaciones-content{
@@ -28,6 +61,13 @@ body{
                     height: 1px;
                     margin-bottom: 2%;
                     width: 40%;
+                }
+            }
+
+            .proyectos-productivos{
+                .vertical-divider{                
+                    width: 64%;
+                    margin-left: 0px;
                 }
             }
 
@@ -48,6 +88,48 @@ body{
                 background-color: #e8baa8;
             }
             
+        }
+
+        .donation-container{
+            .presentation-mode{
+                .carousel{
+                    .control-dots{
+                        text-align: right;
+                        padding-right: 15%;
+                    }
+                }
+                
+                .conten-slide{
+                    .my-slide-content{
+                        .margen-slogan{
+                            padding-bottom: 10%;
+                        }
+                        .slogan-content{                            
+                            width: 50%;
+                            background-color: rgba(241, 241, 241, 0.7);
+                            text-align: left;
+                            padding-left: 5%;
+                            .slogan{
+                                .purchased{
+                                    @include QuickSandRegular(24pt);    
+                                    font-weight: bold;
+                                }
+                                .valor{
+                                    @include MyriadRegular(36pt);    
+                                    color:#fff;
+                                    opacity: 1;
+                                }
+                                .deal{
+                                    @include MyriadRegular(16pt);    
+                                    color:#fff;
+                                    background-color:#1818d2;
+                                    height: 35px;                                    
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         .header-container{
@@ -158,63 +240,7 @@ body{
                     margin-bottom: 3%;
                     padding-left: 25px;
                 }
-            }
-
-            .presentation-mode{
-                padding-top: 3%;
-                .carousel{
-                    .control-dots{
-                        .dot{
-                            width: 30px;
-                            height: 30px;                                            
-                            border: 3px solid #fff;
-                            background: none;
-                            opacity: 1;
-
-                        }
-                        .selected{
-                            opacity: 1;
-                            background: #fff;
-                        }   
-                        
-                    }
-                }
-                .carousel-slider{
-                    margin: 0px auto;
-                }
-                .conten-slide{
-                    .my-slide-content{
-                        background-repeat: no-repeat;
-                        background-size: cover;
-                        min-height: 412px;
-                        width: 100%;
-                        .slogan-content{
-                            height: 100%;
-                            .sloghnan{
-                                .title{
-                                    padding-left: 15px;
-                                }
-                                border: solid 3px white;
-                                border-bottom: 0px;
-                                background-color: #00000021;
-                                @include QuickSandRegular(72pt);
-                                color: #fff;
-                                padding-right: 15px;
-                                margin-top: 47%;
-                                @include breakpoint($min-page-width-md) {
-                                    @include QuickSandRegular(42pt);
-                                    margin-top: 80%;
-                                }
-                                .bottom-slogan {
-                                    font-size: 9pt;
-                                    border-bottom: 3px solid #fff;
-                                }
-                            }
-                        }
-
-                    }
-                }
-            }
+            }            
 
         }
         .nosotros-container{

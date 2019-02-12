@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux';
 
 import Youtube from './common/youtube'
+import Ofertas from './ofertas_donacion';
 
 class Projects extends Component {
 
@@ -55,8 +56,20 @@ class Projects extends Component {
                                     <span className={'color-blue'}> de donación</span>
                                 </div>
                                 <div className={'vertical-divider'} />
-                                <div className={'dontaciones'}>
-                                    <img src={'../../img/gallerie-donaciones.png'} height={'396'} width={'1098'} />
+                                <div>
+                                    <Ofertas />
+                                </div>
+                            </div>
+                        </div>
+                        <div className={'row p-4'} >
+                            <div className={'col-12 proyectos-productivos '} >
+                                <div className={'title'} >
+                                    <span className={'color-blue'}> Nuestros Proyectos </span>
+                                    <span className={'text-bold'} > Productivos</span>
+                                </div>
+                                <div className={'vertical-divider'} />
+                                <div>                                    
+                                    <img width={'100%'} height={'700'} src={"http://localhost/freelance/portalMagicoApi/img/proyectos_productivos.png"} />                                 
                                 </div>
                             </div>
                         </div>
